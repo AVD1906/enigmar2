@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hawkins Lab Access</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="terminal">
+
+  <h1 class="glitch">HAWKINS NATIONAL LAB</h1>
+  <p class="subtitle">SECURE ACCESS TERMINAL</p>
+
+  <div class="divider"></div>
+
+  <p class="story">
+    An unauthorized transmission was detected from the Upside Down.<br>
+    Clearance is required to proceed.
+  </p>
+
+  <p class="prompt">ENTER PREVIOUS KEY</p>
+  <input type="password" id="password" placeholder="••••••••••" autocomplete="off">
+  <button onclick="checkPassword()">AUTHORIZE</button>
+  <p id="error" class="error"></p>
+
+</div>
+
+<script>
+function checkPassword() {
+  const input = document.getElementById("password").value
+    .toLowerCase()
+    .trim();
+
+  if (input === "friends don’t lie" || input === "friends don't lie") {
+    window.location.href = "audio.html";
+  } else {
+    document.getElementById("error").innerText =
+      "ACCESS DENIED — YOU ARE NOT ONE OF US.";
+  }
+}
+</script>
+
+</body>
+</html>

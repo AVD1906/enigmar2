@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transmission Verification</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="terminal">
+
+  <h1 class="glitch">TRANSMISSION VERIFICATION</h1>
+  <p class="subtitle">UPSIDE DOWN CHANNEL</p>
+
+  <div class="divider"></div>
+
+  <p class="story">
+    The decoded transmission must be verified.<br>
+    Enter the message exactly as you heard it.
+  </p>
+
+  <input
+    type="text"
+    id="flagInput"
+    placeholder="Enter decoded message..."
+    autocomplete="off"
+  >
+
+  <button onclick="checkFlag()">VERIFY MESSAGE</button>
+
+  <p id="result" class="error"></p>
+
+</div>
+
+<script>
+function checkFlag() {
+  const input = document.getElementById("flagInput").value
+    .toLowerCase()
+    .trim();
+
+  const correct =
+    "the upside down listens in reverse";
+
+  if (input === correct) {
+    document.getElementById("result").innerHTML =
+      "✔ ACCESS GRANTED<br><br>";
+  } else {
+    document.getElementById("result").innerText =
+      "✖ INCORRECT — THE SIGNAL IS STILL DISTORTED.";
+  }
+}
+</script>
+
+</body>
+</html>
