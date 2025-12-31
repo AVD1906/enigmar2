@@ -2,44 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hawkins Lab Access</title>
+  <title>Upside Down Transmission</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="terminal">
 
-  <h1 class="glitch">HAWKINS NATIONAL LAB</h1>
-  <p class="subtitle">SECURE ACCESS TERMINAL</p>
+  <h1 class="glitch">INTERCEPTED TRANSMISSION</h1>
+
+  <p class="story">
+    This audio was recovered from the Upside Down.<br>
+    It doesn’t sound right when played normally.
+  </p>
+
+  <a href="assets/audio/distorted.wav" download>
+    Download Audio File
+  </a>
+
+  <p class="story">
+    Hint: Reality works differently there.
+  </p>
 
   <div class="divider"></div>
 
   <p class="story">
-    An unauthorized transmission was detected from the Upside Down.<br>
-    Clearance is required to proceed.
+    Once you believe you have decoded the message,
+    proceed to verification.
   </p>
 
-  <p class="prompt">ENTER PREVIOUS KEY</p>
-  <input type="password" id="password" placeholder="••••••••••" autocomplete="off">
-  <button onclick="checkPassword()">AUTHORIZE</button>
-  <p id="error" class="error"></p>
+  <button onclick="location.href='flag.html'">
+    VERIFY TRANSMISSION
+  </button>
 
 </div>
-
-<script>
-function checkPassword() {
-  const input = document.getElementById("password").value
-    .toLowerCase()
-    .trim();
-
-  if (input === "friends don’t lie" || input === "friends don't lie") {
-    window.location.href = "audio.html";
-  } else {
-    document.getElementById("error").innerText =
-      "ACCESS DENIED — YOU ARE NOT ONE OF US.";
-  }
-}
-</script>
 
 </body>
 </html>
